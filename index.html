@@ -3,7 +3,7 @@
 <head>
     <!-- The meta viewport tag is crucial for responsive design, ensuring the page scales correctly on different devices. -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <!-- The title that appears in the browser tab. -->
     <title>My First Website</title>
     <!-- Link to Tailwind CSS, a utility-first CSS framework for rapid styling. -->
@@ -32,4 +32,24 @@
         </a>
     </div>
 </body>
+<script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00Dcf000001nOVF',
+				'Service_Channel',
+				'https://northamericanbancard--yufudev.sandbox.my.site.com/ESWServiceChannel1755298471636',
+				{
+					scrt2URL: 'https://northamericanbancard--yufudev.sandbox.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://northamericanbancard--yufudev.sandbox.my.site.com/ESWServiceChannel1755298471636/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
 </html>
